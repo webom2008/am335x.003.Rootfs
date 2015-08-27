@@ -1,0 +1,8 @@
+#!/bin/sh
+/bin/mount -n -t ramfs ramfs /etc
+/bin/mount -n -t ramfs ramfs /media
+/bin/mount -n -t ramfs ramfs /mnt
+/bin/cp -af /opt/etc/* /etc/
+/bin/cp -af /opt/media/* /media/
+/bin/cp -af /opt/mnt/* /mnt/
+exec /sbin/init

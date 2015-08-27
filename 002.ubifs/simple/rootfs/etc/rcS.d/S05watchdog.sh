@@ -1,0 +1,1 @@
+../init.d/ext_wdt.sh

@@ -1,0 +1,15 @@
+#!/bin/bash
+# Author: QiuWeibo
+# Date  : 2014.5.21
+
+echo "Step1: mkfs.ubifs"
+echo "no sub-page";mkfs.ubifs -F -r rootfs/ -m 2048 -e 126976 -c 512 -o rootfs.ubi
+
+echo "Step2: ubinize"
+ubinize -vv -o ubi.img -m 2048 -p 128KiB ubinize.cfg
+
+echo "Step3: cp tftproot, rm ..."
+cp ubi.img ~/tftproot/
+rm ubi.img rootfs.ubi
+ls -l ~/tftproot/ubi.img
+echo "End!"

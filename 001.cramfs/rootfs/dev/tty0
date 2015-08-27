@@ -1,0 +1,14 @@
+stty: standard input: Inappropriate ioctl for device
+Starting udev
+-QWB-:/etc/init.d/user.sh
+/etc/pointercal exist!
+ubiattach ...
+UBI device number 0, total 1496 LEBs (189956096 bytes, 181.2 MiB), available 74 LEBs (9396224 bytes, 9.0 MiB), LEB size 126976 bytes (124.0 KiB)
+ubimkvol...
+libubi: error!: cannot get information about "/dev/ubi1"
+        error 2 (No such file or directory)
+ubimkvol: error!: error while probing "/dev/ubi1"
+          error 2 (No such file or directory)
+touch: /var/volatile/run/InitFinishTag: No such file or directory
+mount: mounting ubi1:userfs on /mnt/userfs/ failed: No such device
+/mnt/userfs/Monitor have Run already!
