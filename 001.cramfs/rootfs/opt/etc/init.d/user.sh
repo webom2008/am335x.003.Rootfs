@@ -44,13 +44,13 @@ if [ ! -e "/var/volatile/run/InitFinishTag" ];then
 #Add by QWB 20141112 :/dev/rtc for "hwclock -s"
         rm -f /dev/rtc
         ln -s /dev/rtc1 /dev/rtc
-	mkdir -p /var/volatile/cache/
+	mkdir -p /var/volatile/cache/cups/rss/
 	mkdir -p /var/volatile/lock/
-	mkdir -p /var/volatile/log/
-	mkdir -p /var/volatile/run/
-	mkdir -p /var/volatile/log/
-	mkdir -p /var/volatile/run/
+	mkdir -p /var/volatile/log/cups/
+	mkdir -p /var/volatile/run/cups/certs/
 	mkdir -p /var/volatile/tmp/
+	mkdir -p /var/volatile/spool/cups/tmp/
+	mkdir -p /var/volatile/spool/mail/
 	touch /var/volatile/run/InitFinishTag
 	ifconfig eth0 192.168.1.110 netmask 255.255.255.0
 	ifconfig lo 127.0.0.1 up
